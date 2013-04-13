@@ -1,6 +1,6 @@
 {{{
     "title"    : "Dancer.js, a high-level audio API",
-    "tags"     : [ "web audio", "audio data", "webgl" ],
+    "tags"     : [ "draft", "web audio", "audio data", "webgl" ],
     "category" : "audio",
     "date"     : "7-30-2012",
     "preview"  : "dancer.js is a high-level audio API, usable with both Mozilla's Audio Data API and Webkit's Web Audio API with flash fallback, designed to make sweet visualizations.\nhttp://jsantell.github.com/dancer.js\n\n_v0.2.1 (6/15/2012)_\n\nFeatures\n\n---\n* Use real-time audio waveform and frequency data and map it to any arbitrary visualization\n* Leverage beat detection into your visualizations\n* Simple API to time callbacks and events to any section of a song\n* Supports Web Audio (webkit), Audio Data (mozilla) and flash fallback (v9+)\n* Extensible framework supporting plugins and custom behaviours"
@@ -39,7 +39,7 @@ All controls return `this`.
 
 * `getTime()` returns the current time.
 * `getWaveform()` returns the waveform data array (Float32Array(1024))
-* `getSpectrum()` returns the frequency data array (Float32Array(512)). 
+* `getSpectrum()` returns the frequency data array (Float32Array(512)).
 * `getFrequency( freq [, endFreq ] )` returns the magnitude of a frequency or average over a range of frequencies.
 * `isLoaded()` returns a boolean value for the dancer instance's song load state.
 * `isPlaying()` returns a boolean value indicating whether the dancer instance's song is currently playing or not.
@@ -160,7 +160,7 @@ Dependencies
 Extending/Plugins
 ---
 
-You can extend the Dancer prototype by calling the static method `addPlugin( name, fn )`, which extends the Dancer prototype. A Dancer instance then can call the function provided in its context and subscribe to a preexisting event like `update`, or make your own. Look in the `plugins/` directory for examples. 
+You can extend the Dancer prototype by calling the static method `addPlugin( name, fn )`, which extends the Dancer prototype. A Dancer instance then can call the function provided in its context and subscribe to a preexisting event like `update`, or make your own. Look in the `plugins/` directory for examples.
 
 Development
 ---
